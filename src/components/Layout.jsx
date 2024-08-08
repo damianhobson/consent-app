@@ -1,11 +1,11 @@
-import { useState } from 'react'
 import { Link, Outlet } from "react-router-dom";
 import Button from '@mui/material/Button';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export default function Layout({page, setPage}) {
-  
+  const matches = useMediaQuery('(min-width:920px)');
   return (
-    <div className="app">
+    <div className={`app ${matches ? 'lg' : 'sm'}`}>
       <div className="nav">
         <Link to="/give-consent" className="item">
           <Button 

@@ -7,13 +7,26 @@
 body {
   .app{
     display: flex;
-    flex-direction: row;
+    &.lg{
+      flex-direction: row;
+      .nav{
+        border-right: 2px solid grey;
+        Button{ width: 90%;}
+      }
+    }
+    &.sm{
+      flex-direction: column;
+      .nav{
+        display: flex;
+        border-bottom: 2px solid grey;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        Button{ width: 200px;}
+      }
+    }
     .nav{
       flex: 1;
-      min-height: 500px;
-      border-right: 2px solid grey;
       Button{
-        width: 90%;
         margin: auto 0;
         margin-bottom: 20px;
       }
@@ -32,6 +45,11 @@ body {
           display: flex;
           justify-content: center;
         }
+      }
+      .consentPagination{
+        padding-top: 10px;
+        display: flex;
+        justify-content: center;
       }
     }
   }
