@@ -1,0 +1,39 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+body {
+  .app{
+    display: flex;
+    flex-direction: row;
+    .nav{
+      flex: 1;
+      min-height: 500px;
+      border-right: 2px solid grey;
+      Button{
+        width: 90%;
+        margin: auto 0;
+        margin-bottom: 20px;
+      }
+    }
+    .main{
+      flex: 3;
+      .give{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .userInfo{
+          margin-bottom: 20px;
+        }
+        .checkList{
+          margin-top: 20px;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
